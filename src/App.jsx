@@ -6,6 +6,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./components/Home";
 import Navbar from "./navbar/Navbar";
+import Equipes from "./components/Equipes";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/equipes" element={<Equipes />} />
         </Routes>
       </BrowserRouter>
     </div>
