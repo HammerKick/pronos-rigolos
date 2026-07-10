@@ -12,7 +12,7 @@ export default function Navbar() {
           </li>
           <li
             className="hover:cursor-pointer"
-            onClick={() => navigate("/equipes")}
+            onClick={() => navigate("/teams")}
           >
             Equipes et joueurs
           </li>

@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { API_URL, API_KEY } from "../config";
 
 export default function Equipes() {
   const [teams, setTeams] = useState([]);
   const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const apiUrl = import.meta.env.VITE_FOOTBALL_API_URL;
-  const apiKey = import.meta.env.VITE_FOOTBALL_API_KEY;
 
   useEffect(() => {
     const getTeams = async () => {
       try {
-        const response = await fetch(`${apiUrl}competitions/WC/teams`, {
+        const response = await fetch(`${API_URL}competitions/WC/teams`, {
           method: "GET",
           headers: {
-            "X-Auth-Token": apiKey,
+            "X-Auth-Token": API_KEY,
           },
         });
 
@@ -47,7 +46,7 @@ export default function Equipes() {
           </div>
           <ul className="grid grid-cols-8 gap-4 text-md p-4 mt-4">
             {teams.map((team) => (
-              <Link to={`/equipe/${team.id}`} key={team.id}>
+              <Link to={`/team/${team.id}`} key={team.id}>
                 <li className="flex flex-row gap-4 font-bold border-white shadow-md p-4 bg-lime-100 hover:bg-lime-200 hover:cursor-pointer">
                   <img src={team.area.flag} className="w-8 h-8" /> {team.name}
                 </li>

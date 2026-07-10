@@ -1,13 +1,10 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./components/Home";
 import Navbar from "./navbar/Navbar";
 import Equipes from "./components/Equipes";
 import InfosEquipes from "./components/InfosEquipes";
+import Joueur from "./components/Joueur";
 
 function App() {
   return (
@@ -16,8 +13,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/equipes" element={<Equipes />} />
-          <Route path="/equipe/:teamId" element={<InfosEquipes />} />
+          <Route path="/teams" element={<Equipes />} />
+          <Route path="/team/:teamId" element={<InfosEquipes />} />
+          <Route path="/player/:playerId" element={<Joueur />} />
         </Routes>
       </BrowserRouter>
     </div>
