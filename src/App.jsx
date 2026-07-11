@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Navbar from "./navbar/Navbar";
 import Equipes from "./components/Equipes";
 import InfosEquipes from "./components/InfosEquipes";
+import InfosMatches from "./components/matches/info-matches";
 import Joueur from "./components/Joueur";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/teams" element={<Equipes />} />
           <Route path="/team/:teamId" element={<InfosEquipes />} />
+          <Route path="/match/:matchId" element={<InfosMatches />} />
           <Route path="/player/:playerId" element={<Joueur />} />
         </Routes>
       </BrowserRouter>

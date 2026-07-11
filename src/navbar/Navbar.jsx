@@ -16,6 +16,12 @@ export default function Navbar() {
           >
             Equipes et joueurs
           </li>
+          <li
+            className="hover:cursor-pointer"
+            onClick={() => navigate("/matches")}
+          >
+            Les matches
+          </li>
           <li className="hover:cursor-pointer">Profil</li>
           <li className="hover:cursor-pointer">Déconnexion</li>
         </ul>
