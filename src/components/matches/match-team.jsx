@@ -16,7 +16,7 @@ export const MatchTeam = ({ team, score, side, winner }) => {
       </div>
       <div className="flex items-center justify-between">
         <span
-          className={` ${isHome ? "ml-auto" : ""} ${isWinner ? "text-gray-900 text-lg" : "text-gray-300"}`}
+          className={` ${isHome ? "ml-auto" : ""} ${isWinner ? "text-gray-900 text-lg" : "text-gray-500"}`}
         >
           {isHome ? score.fullTime.home : score.fullTime.away}
         </span>
