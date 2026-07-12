@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router";
+
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col items-center justify-center">
@@ -10,18 +13,19 @@ export default function Home() {
         </div>
 
         <div className="mt-8 flex flex-row gap-4 text-white font-title">
-          <div className="bg-blue-500 hover:bg-blue-300 hover:cursor-pointer p-4 rounded-lg">
-            Vos pronostics
+          <div
+            className="bg-blue-500 hover:bg-blue-300 hover:cursor-pointer p-4 rounded-lg"
+            onClick={() => navigate("/matches")}
+          >
+            Voir les matchs
           </div>
-          <div className="bg-blue-500 hover:bg-blue-300 hover:cursor-pointer p-4 rounded-lg">
+          <div
+            className="bg-blue-500 hover:bg-blue-300 hover:cursor-pointer p-4 rounded-lg"
+            onClick={() => navigate("/teams")}
+          >
             Voir les équipes
           </div>
         </div>
-        <div className="w-full border-t mt-8"></div>
-        <div className="mt-4">
-          <h2 className="text-5xl font-title font-bold">Matchs à venir</h2>
-        </div>
-        <div className="mt-4 grid grid-cols-3 gap-4"></div>
       </div>
     </>
   );

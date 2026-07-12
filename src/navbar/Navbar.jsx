@@ -22,8 +22,6 @@ export default function Navbar() {
           >
             Les matches
           </li>
-          <li className="hover:cursor-pointer">Profil</li>
-          <li className="hover:cursor-pointer">Déconnexion</li>
         </ul>
       </nav>
     </>
