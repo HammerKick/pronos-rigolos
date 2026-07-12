@@ -6,7 +6,7 @@ export const MatchTeam = ({ team, score, side, winner }) => {
     (isHome && winner === "HOME_TEAM") || (!isHome && winner === "AWAY_TEAM");
   return (
     <div className="flex flex-col w-24">
-      <div className="w-full flex items-center justify-start">
+      <div className="w-full flex items-center justify-start text-lg">
         {isHome && (team?.tla ?? "TBA")}
         <img
           src={team?.crest ?? "/crest_48dp.png"}

@@ -8,11 +8,11 @@ const statusLabels = {
   TIMED: "À venir",
 };
 
-export const MatchCard = ({ match }) => (
-  <Link to={`/match/${match.id}`} key={match.id}>
+export const MatchCard = ({ match, key }) => (
+  <Link to={`/match/${match.id}`} key={key}>
     <div className="font-bold border-white shadow-md hover:scale-110 duration-150 p-2 bg-lime-200  hover:cursor-pointer rounded-xl">
       <div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row">
           <MatchTeam
             team={match.homeTeam}
             score={match.score}
