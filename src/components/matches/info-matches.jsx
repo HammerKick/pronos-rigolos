@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import { API_URL, API_KEY } from "../../config";
+import { MatchDetails } from "./match-details";
 
 export default function InfosMatches() {
   const [match, setMatch] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  const { teamId } = useParams();
+  const { matchId } = useParams();
 
   useEffect(() => {
     const getMatch = async () => {
@@ -43,14 +44,8 @@ export default function InfosMatches() {
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center text-6xl font-bold font-title mt-8 gap-8">
-          <span className="flex flex-row gap-8">
-            <img src={match.area.flag} className="w-16 h-16" />{" "}
-            {match.shortName}
-          </span>
-          <span className="text-lg">
-            Niveau : {match.stage} Status:{match.status} Home team(
-            {match.homeTeam.shortName} Away team({match.awayTeam.shortName})
-          </span>
+          <h1>Détails du match</h1>
+          <MatchDetails key={match.id} match={match} />
         </div>
       )}
     </>
