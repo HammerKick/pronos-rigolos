@@ -4,20 +4,10 @@ import { MatchTeam } from "./match-team";
 import { MatchCard } from "./match-card";
 
 export const MatchesCard = ({ matches }) => {
-  let lastStage = "";
   return (
-    <div className="flex items-center flex-wrap gap-10 justify-center text-md p-4 bg-lime-300 mt-4">
+    <div className="flex items-center flex-wrap gap-8 justify-center text-md p-4 bg-lime-300">
       {matches.map((match) => {
-        const displayStage = lastStage !== match.stage;
-        lastStage = match.stage;
-        return (
-          <div key={match.id}>
-            {displayStage && (
-              <h1 className="text-xl font-bold">{match.stage}</h1>
-            )}
-            <MatchCard match={match} />{" "}
-          </div>
-        );
+        return <MatchCard match={match} />;
       })}
     </div>
   );

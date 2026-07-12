@@ -58,12 +58,12 @@ export default function Matches() {
         </div>
       ) : (
         <div className="transition flex flex-col">
-          <div className="mt-4 mb-10 flex items-center justify-center font-title font-bold">
+          <div className="mt-4 mb-6 flex items-center justify-center font-title font-bold">
             <h1 className="text-3xl">Les matches de la Coupe du Monde</h1>
           </div>
           <div className="flex gap-8">
             <div className="flex flex-col w-3/4 h-fit bg-amber-700 items-center justify-center text-2xl">
-              <h1 className="bg-blue-500">Matchs avec résultas</h1>
+              <h1 className="bg-blue-500 text-3xl">Matchs avec résultas</h1>
 
               <MatchesCard matches={matches} />
             </div>
